@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  cloud-weather-postgres:
+    container_name: pg_container
+    image: debezium/postgres:13-alpine
+    restart: always
+    environment: 
+      - POSTGRES_DATABASE=cloud_weather_dev
+      - POSTGRES_USER=cloud_weather_dev
+      - POSTGRES_PASSWORD=cloud_weather_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/data/db
+#    networks:
+#      - cloud-weather-services
+
+volumes:
+  postgres-data:
+
+
+# networks:
+#  cloud-weather-services:
+#    driver: bridge
