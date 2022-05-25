@@ -1,4 +1,4 @@
-﻿namespace cloudweather.precipitation.DataAccess
+﻿namespace Cloudweather.Precipitation.DataAccess
 {
     public class Precipitation
     {
@@ -6,6 +6,6 @@
         public DateTime CreatedOn { get; set; }
         public decimal AmountInches { get; set; }
         public string WeatherType { get; set; }
-        public string Zipcode { get; set; }
+        public string ZipCode { get; set; }
     }
 }

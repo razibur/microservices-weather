@@ -1,19 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Cloudweather.Precipitation.DataAccess
+namespace Cloudweather.Temperature.DataAccess
 {
-    public class PrecipDbContext : DbContext
+    public class TempatureDbContext : DbContext
     {
-        public PrecipDbContext()
+        public TempatureDbContext()
         {
 
         }
-        public PrecipDbContext(DbContextOptions opts) : base(opts)
+        public TempatureDbContext(DbContextOptions opts) : base(opts)
         {
 
         }
 
-        public DbSet<Precipitation> Precipitation { get; set; }
+        public DbSet<Temperature> Temperature { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -22,7 +22,7 @@ namespace Cloudweather.Precipitation.DataAccess
 
         private static void SnakeCaseIdentityTableNames(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Precipitation>(b => { b.ToTable("precipitation"); });
+            modelBuilder.Entity<Temperature>(b => { b.ToTable("temperature"); });
         }
     }
 }

@@ -1,4 +1,4 @@
-using cloudweather.precipitation.DataAccess;
+using Cloudweather.Precipitation.DataAccess;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,7 +23,7 @@ app.MapGet("/observation/{zip}", async (string zip, [FromQuery] int? days, Preci
      }
      var startDate = DateTime.UtcNow - TimeSpan.FromDays(days.Value);
      var results = await db.Precipitation
-        .Where(precip => precip.Zipcode == zip && precip.CreatedOn > startDate)
+        .Where(precip => precip.ZipCode == zip && precip.CreatedOn > startDate)
         .ToListAsync();
 
      return Results.Ok(results);
