@@ -25,5 +25,6 @@
 
 **VIM**
 replace command: %s/Tempeture/Report/g
+
 *Check Report*
 http://localhost:5000/weather-report/19717?days=10
