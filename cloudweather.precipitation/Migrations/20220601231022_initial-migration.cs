@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace cloudweather.precipitation.Migrations
+namespace Cloudweather.Precipitation.Migrations
 {
     public partial class initialmigration : Migration
     {
@@ -17,7 +17,7 @@ namespace cloudweather.precipitation.Migrations
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     AmountInches = table.Column<decimal>(type: "numeric", nullable: false),
                     WeatherType = table.Column<string>(type: "text", nullable: false),
-                    Zipcode = table.Column<string>(type: "text", nullable: false)
+                    ZipCode = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

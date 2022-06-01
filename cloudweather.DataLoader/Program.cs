@@ -10,12 +10,12 @@ IConfiguration config = new ConfigurationBuilder()
 var serviceConfig = config.GetSection("Services");
 
 var tempServiceConfig = serviceConfig.GetSection("Temperature");
-var tempServiceHost = serviceConfig.GetSection("Host");
-var tempServicePort = serviceConfig.GetSection("Port");
+var tempServiceHost = tempServiceConfig["Host"];
+var tempServicePort = tempServiceConfig["Port"];
 
 var precipServiceConfig = serviceConfig.GetSection("Precipitation");
-var precipServiceHost = serviceConfig.GetSection("Host");
-var precipServicePort = serviceConfig.GetSection("Port");
+var precipServiceHost = precipServiceConfig["Host"];
+var precipServicePort = precipServiceConfig["Port"];
 
 var zipCodes = new List<string>
 {
