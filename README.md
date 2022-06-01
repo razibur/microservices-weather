@@ -23,3 +23,5 @@
 * dotnet ef migrations add initial-migration
 * dotnet ef database update
 
+*Check Report*
+http://localhost:5000/weather-report/19717?days=10
