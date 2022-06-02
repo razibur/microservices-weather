@@ -7,6 +7,8 @@
  *  git pull
  *  git push -u origin main
  
+ * git config --list --show-origin
+ 
 **Docker**
 * docker-compose up -d
 * docker ps
