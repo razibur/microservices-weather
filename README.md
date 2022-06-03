@@ -21,11 +21,15 @@
 
 **Postgres**
 *  ALTER ROLE cloud_weather_dev WITH PASSWORD 'cloud_weather_dev';
+*  CREATE USER weather_stage WITH password 'changeme!';
 
 **EF**
 * dotnet tool install --global dotnet-ef
 * dotnet ef migrations add initial-migration
 * dotnet ef database update
+ 
+ Generate sql script:
+  dotnet ef migrations script -idempotent -o 000_tempdb.sql
 
 **VIM**
 replace command: %s/Tempeture/Report/g
