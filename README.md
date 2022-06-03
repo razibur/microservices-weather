@@ -34,7 +34,8 @@ replace command: %s/Tempeture/Report/g
 home directory: vi $USERPROFILE/.aws/credentials
 
 **Linux**
-chmod +x build_and_push_ecr_image.sh
+* chmod +x build_and_push_ecr_image.sh
+* sh ./build_and_push_ecr_image.sh
 
 *build_and_push_ecr_image.sh*
 #
