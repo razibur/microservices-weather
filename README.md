@@ -30,6 +30,8 @@
 replace command: %s/Tempeture/Report/g
 
 **AWS**
+home directory: vi $USERPROFILE/.aws/credentials
+
 #
 set -e
 aws ecr get-login-password --region us-east-1 --profile weather-ecr-agent | docker login --username AWS --password stdin 748840328402.dkr.ecr.us-east-1.amazonaws.com
