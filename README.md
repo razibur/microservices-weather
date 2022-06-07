@@ -22,7 +22,13 @@
 **Postgres**
 *  ALTER ROLE cloud_weather_dev WITH PASSWORD 'cloud_weather_dev';
 *  CREATE USER weather_stage WITH password 'changeme!';
-
+*  SELECT grantee, privilege_type
+   FROM information_schema.role_table_grants
+   WHERE table_name='temperature'
+*  GRANT SELECT, INSERT, UPDATE, DELETE
+   ON ALL TABLES IN SCHEMA public
+   TO weather_stage;
+   
 **EF**
 * dotnet tool install --global dotnet-ef
 * dotnet ef migrations add initial-migration
